@@ -40,12 +40,12 @@ namespace BooksApi.Services
             _books.ReplaceOne(book => book.Id == id, bookIn);
         }
 
-        public void Delete(string id)
+        public void Remove(string id)
         {
             _books.DeleteOne(book => book.Id == id);
         }
 
-        public void Delete(Book bookIn)
+        public void Remove(Book bookIn)
         {
             _books.DeleteOne(book=>book.Id==bookIn.Id);
         }
